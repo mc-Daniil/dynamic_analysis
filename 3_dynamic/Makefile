@@ -1,12 +1,17 @@
-.PHONY: clean dynamic run
+.PHONY: clean dynamic
 
 CC = gcc
 CFLAGS = -g
 SRC = main.c
-LIBSRC = util.c
-LIBNAME = util
+TARGET = main
+LIBSRC = utils.c
+LIBNAME = utils
 
 dynamic: lib$(LIBNAME).so $(SRC)
-	$(CC) $(CFLAGS) $(SRC) -L. -l$(LIBNAME) -o $(DYN_TARGET)
+	$(CC) $(CFLAGS) $(SRC) -L. -l$(LIBNAME) -o $(TARGET)
 
 lib$(LIBNAME).so: $(LIBSRC)
+	$(CC) -fPIC -shared -g $(LIBSRC) -o lib$(LIBNAME).so
+
+clean:
+	rm -f $(TARGET) *.o *.so *.a
