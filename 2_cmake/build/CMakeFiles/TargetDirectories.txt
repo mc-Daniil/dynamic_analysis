@@ -1,0 +1,3 @@
+/mnt/d/teaching/vsosh/Tasks/29.12.2025/2_cmake/build/CMakeFiles/main.dir
+/mnt/d/teaching/vsosh/Tasks/29.12.2025/2_cmake/build/CMakeFiles/edit_cache.dir
+/mnt/d/teaching/vsosh/Tasks/29.12.2025/2_cmake/build/CMakeFiles/rebuild_cache.dir
