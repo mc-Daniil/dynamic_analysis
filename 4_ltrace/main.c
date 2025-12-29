@@ -7,9 +7,11 @@ int main() {
     printf("Enter 4 characters: ");
     scanf("%4c", input);
     input[4] = '\0';
+
     // Очистка буфера ввода
     int c;
     while ((c = getchar()) != '\n' && c != EOF) {}
+    
     if (strcmp(input, correct) == 0) {
         printf("Match!\n");
     } else {
